@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import react, { useEffect, useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Bio from "./components/Bio";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
+  const [user, setUser] = useState(0);
+  useEffect(() => {
+    fetchData();
+  }, []);
+  async function fetchData() {
+    //alimentarse de api
+    const getData = await fetch("https://api.github.com/users/agusgrance");
+    const dataToJson = await getData.json();
+    setUser(dataToJson);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="sitio">
+        <Bio img={user.avatar_url} location={user.location} />
+        <Experience />
+        <Projects />
+        {/* <Contact /> */}
+      </div>
     </div>
   );
 }

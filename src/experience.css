@@ -1,0 +1,90 @@
+.experience,
+.contacto {
+  margin-bottom: 10%;
+}
+.experience {
+  clear: both;
+  height: 100%;
+  text-align: center;
+}
+
+i.dropdown {
+  position: relative;
+  width: 100%;
+  margin: 50% auto;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
+i.dropdown:hover {
+  opacity: 0.7;
+}
+
+.job-logo {
+  background-color: rgb(26, 106, 186);
+  width: fit-content;
+  padding: 12px;
+  margin: 25px auto;
+}
+
+.job {
+  margin: 50px 125px;
+  background: white;
+  padding: 70px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 1px #00000040;
+}
+
+.job-data h3 {
+  font-weight: 700;
+}
+.job-data h4 {
+  font-weight: 200;
+}
+
+.job-data h3,
+.job-data h4,
+.job-data h6 {
+  margin: 18px auto;
+}
+
+.card {
+  width: 30%;
+  display: inline-flex;
+  margin: 20px;
+}
+
+.card img {
+  object-fit: cover;
+  height: 360px;
+}
+
+.contacto {
+  margin-top: 10%;
+}
+.cv {
+  background-color: rgb(26, 106, 186);
+  padding: 12px;
+  border-radius: 20px;
+}
+
+a.cv {
+  color: white;
+  text-decoration: none;
+}
+
+.experience h2 {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 450px) {
+  .job {
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
