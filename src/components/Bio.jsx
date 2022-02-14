@@ -17,7 +17,7 @@ function Bio({ img, location }) {
           {location}
         </h6>
         <h6>
-          <i class="fas fa-mobile-alt"></i>
+          <i className="fas fa-mobile-alt"></i>
           <a href="tel:+5491124935528">+54 9 1124935528</a>
         </h6>
         <div className="redes">
